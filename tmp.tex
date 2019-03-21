@@ -1,0 +1,11 @@
+\documentclass{jarticle}
+\def\ruby#1#2{%
+\leavevmode
+\setbox0=\hbox{#1}\setbox1=\hbox{\tiny#2}%
+\ifdim\wd0>\wd1 \dimen0=\wd0 \else \dimen0=\wd1 \fi
+\hbox{\kanjiskip=\fill
+\vbox{\hbox to \dimen0{\tiny \hfil#2\hfil}%
+\nointerlineskip
+\hbox to \dimen0{\hfil#1\hfil}}}}
+\begin{document}
+\end{document}
